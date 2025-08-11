@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "core-adversarial-dbm"
+version = "0.1.0"
+description = ""
+authors = ["Alister Machado dos Reis <a.machadodosreis@uu.nl>"]
+readme = "README.md"
+packages = [{include = "core_adversarial_dbm"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+hydra-core = "^1.3.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

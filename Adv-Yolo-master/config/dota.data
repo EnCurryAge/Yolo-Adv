@@ -1,0 +1,6 @@
+classes=16
+train=D:\Yolo-adv\DOTA\train\images
+valid=D:\Yolo-adv\DOTA\train\images
+names=data/dota.names
+backup=backup/
+eval=coco
