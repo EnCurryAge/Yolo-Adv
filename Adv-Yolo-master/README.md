@@ -21,20 +21,20 @@
 
 ### 准备工作
 1. 首先借助[Anaconda](https://www.anaconda.com/download)环境管理软件安装虚拟环境：
-``` python
+```
 conda create -n adv-yolo python==3.11
 ```
 
 2. 检查主机CUDA版本，激活环境，并安装指定版本的Pytorch和Torchvision，建议安装GPU版本以加速运算，并且推荐从国内镜像直接安装:
   (本项目的运行环境为Windows-11系统下双卡4090服务器，CUDA版本12.6，内存为64G)
-``` python
+```
 nvidia-smi
 conda activate adv-yolo
 pip install torch==2.6.0 torchvision==0.21.0 -f https://mirrors.aliyun.com/pytorch-wheels/cu126
 ```
 
 3. 按照requirements.txt安装全部特定版本的依赖库：
-``` python
+```
 pip install -r requirements.txt
 ```
 
@@ -46,7 +46,7 @@ pip install -r requirements.txt
 - 使用DOTA v1.5预训练的Yolo v3模型及配置文件：<https://drive.google.com/drive/folders/1Y-W2npeaqflfO8IUA7gx9PzmesaSl9rY?usp=sharing>
 
 ### 代码结构
-```
+``` python
 Adv-Yolo-master
 ├── pytorchyolo
 |   ├── utils
@@ -124,7 +124,7 @@ Adv-Yolo-master
 
 ### 项目团队相关论文参考
 1. 此论文详细介绍了在模型决策空间中寻找单一样本的最近且分类错误的邻域样本的方法，此方法是本项目定位高敏感样本并引入对抗噪声补丁的基础。同时，此论文还引入了决策边界扩张修补技术，该技术构成本项目对于高对抗敏感度样本进行保护的核心理论。
-    ```
+    ``` bibtex
     @inproceedings{chen2023boundary,
       title={Boundary unlearning: Rapid forgetting of deep networks via shifting the decision boundary},
       author={Chen, Min and Gao, Weizhuo and Liu, Gaoyang and Peng, Kai and Wang, Chen},
@@ -136,8 +136,8 @@ Adv-Yolo-master
     <br>
 
 2. 此论文包含决策边界可视化的研究，以及样本特征点与决策边界关系的讨论。
-    ```
-    @inproceedings{,
+    ``` bibtex
+    @inproceedings{xu2024united,
       title={United We Stand, Divided We Fall: Fingerprinting Deep Neural Networks via Adversarial Trajectories}, 
       author={Xu, Tianlong and Wang, Chen and Liu, Gaoyang and Yang, Yang and Peng, Kai and Liu, Wei},
       year={2024},
@@ -147,8 +147,8 @@ Adv-Yolo-master
     <br>
 
 3. 此论文继续推进了决策边界修补重塑的研究工作，为后续算法更新迭代奠定基础。
-    ```
-    @inproceedings{,
+    ``` bibtex
+    @inproceedings{chen2025from,
       title={From Expansion to Retraction: Long-tailed Machine Unlearning via Boundary Manipulation}, 
       author={Chen, Min and Gao, Weizhuo and Wang, Chen Liu, Gaoyang and Ahmed M. Abdelmoniem and Peng, Kai},
       year={2025},
